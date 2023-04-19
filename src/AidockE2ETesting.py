@@ -54,7 +54,7 @@ class AidockE2ETesting:
     def is_primary_tab_selected(self) -> bool:
         # Task #6
         # the selected tab contains a pseudo before element with a background color so we want to use js to compute the color
-        primary_pseudo_elements_color =  self.driver.execute_script("return window.getComputedStyle(document.querySelector('div[role=tab]'), ':before').getPropertyValue('background-color')")
+        primary_pseudo_elements_color = self.driver.execute_script("return window.getComputedStyle(document.querySelector('div[role=tab]'), ':before').getPropertyValue('background-color')")
         return primary_pseudo_elements_color != NON_SELECTED_TAB_COLOR
 
     def open_primary_tab(self):
